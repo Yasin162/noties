@@ -63,6 +63,7 @@ const Home = () => {
     return (
       <div>
         <h1>Notes</h1>
+        <hr />
         <Search searchNote={setSearchText} />
         <NotesList
           deleteNote={deleteNote}
