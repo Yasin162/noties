@@ -35,7 +35,9 @@ const Navigation = () => {
           <Link to="/" style={linkStyles}>
             Home
           </Link>
-          <button onClick={logoutUser}>logout</button>
+          <button onClick={logoutUser} className="save">
+            logout
+          </button>
         </nav>
       </div>
     );

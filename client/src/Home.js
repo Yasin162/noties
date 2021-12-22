@@ -14,7 +14,11 @@ const Home = () => {
       });
   }, []);
   if (!loggedIn) {
-    return <h1>{errors}</h1>;
+    return (
+      <div>
+        <h1>{errors}</h1>
+      </div>
+    );
   } else {
     const updateNote = (newText, textId) => {
       fetch(`note/${textId}`, {

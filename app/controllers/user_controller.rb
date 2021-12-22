@@ -20,6 +20,15 @@ class UserController < ApplicationController
 
     end
 
+    # def more_than_two_notes
+    #     user_notes = Notes.all
+    #     if user_notes > 2
+    #         render json: user_notes
+    #     else
+    #         render json: {error: "Has less than one note"}
+    #     end
+    # end
+
     private
 
     def user_params 

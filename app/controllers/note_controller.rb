@@ -6,6 +6,7 @@ class NoteController < ApplicationController
     end
     
     def create
+        binding.pry
         note = current_user.notes.create(note_params)
         if note.valid?
             render json: note
