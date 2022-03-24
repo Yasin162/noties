@@ -5,17 +5,17 @@ import { UserContext } from "./context/User";
 const Navigation = () => {
   const { logout, loggedIn } = useContext(UserContext);
   const navigate = useNavigate();
-  const linkStyles = {
-    textAlign: "center",
-    borderRadius: 40,
-    display: "inline-block",
-    width: "90px",
-    padding: "20px",
-    margin: "0 12px 6px",
-    background: "blue",
-    textDecoration: "none",
-    color: "Beige",
-  };
+  // const linkStyles = {
+  //   textAlign: "center",
+  //   borderRadius: 40,
+  //   display: "inline-block",
+  //   width: "90px",
+  //   padding: "20px",
+  //   margin: "0 12px 6px",
+  //   background: "blue",
+  //   textDecoration: "none",
+  //   color: "Beige",
+  // };
   if (loggedIn !== false) {
     const logoutUser = () => {
       fetch("/logout", {
@@ -32,7 +32,7 @@ const Navigation = () => {
     return (
       <div className="nav-div">
         <nav>
-          <Link to="/" style={linkStyles}>
+          <Link to="/" className="nav">
             Home
           </Link>
           <button onClick={logoutUser} className="save">
@@ -43,14 +43,14 @@ const Navigation = () => {
     );
   } else {
     return (
-      <div>
-        <Link to="/" style={linkStyles}>
+      <div className="nav-div">
+        <Link to="/" className="nav">
           Home
         </Link>
-        <Link to="signup" style={linkStyles}>
+        <Link to="signup" className="nav">
           signup
         </Link>
-        <Link to="login" style={linkStyles}>
+        <Link to="login" className="nav">
           login
         </Link>
       </div>

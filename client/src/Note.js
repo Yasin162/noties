@@ -24,7 +24,10 @@ const Note = ({ noteId, text, timestamp, deleteNote, updateOneNote }) => {
       {/* </span> */}
       <div className="note-bottom">
         <small>{timestamp}</small>
-        <button className="save" onClick={updateOneNote(editNote, noteId)}>
+        <button
+          className="save"
+          onClick={() => updateOneNote(editNote, noteId)}
+        >
           Save
         </button>
         <button
