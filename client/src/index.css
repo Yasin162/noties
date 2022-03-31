@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(72, 72, 90);
+  background-color: rgb(61, 3, 155);
+}
+h1 {
+  text-align: center;
 }
 
 code {
